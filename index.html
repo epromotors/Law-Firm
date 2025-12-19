@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Services Support | Strategic Solutions for Law Firms</title>
+    <meta name="description" content="Empower your law firm with litigation support, compliance solutions, and scaling infrastructure.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2d3748;
+            background: white;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* ============ HEADER ============ */
+        header {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+        }
+        
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e3a5f;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+        
+        .logo span {
+            color: #10b981;
+        }
+        
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #2d3748;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #10b981;
+        }
+        
+        .cta-button {
+            background: #10b981;
+            color: white;
+            padding: 0.625rem 1.25rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: #059669;
+        }
+        
+        /* ============ HERO SECTION ============ */
+        .hero {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.75rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: #10b981;
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        
+        .btn-primary:hover {
+            background: #059669;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 0.75rem 1.75rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #1e3a5f;
+        }
+        
+        /* ============ SECTIONS ============ */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            font-size: 2.25rem;
+            color: #1e3a5f;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #718096;
+            margin-bottom: 3rem;
+            max-width: 700px;
+        }
+        
+        /* ============ VALUE PROPOSITION ============ */
+        .value-props {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .value-card {
+            background: #f7fafc;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border-left: 4px solid #10b981;
+            transition: all 0.3s;
+        }
+        
+        .value-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+        
+        .value-card h3 {
+            color: #1e3a5f;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .value-card p {
+            color: #4a5568;
+            line-height: 1.8;
+        }
+        
+        /* ============ SERVICES ============ */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 2.5rem;
+            border-radius: 0.75rem;
+            transition: all 0.3s;
+        }
+        
+        .service-card:hover {
+            border-color: #10b981;
+            box-shadow: 0 20px 40px rgba(16, 185, 129, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card h3 {
+            color: #1e3a5f;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .service-card p {
+            color: #4a5568;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .service-features {
+            list-style: none;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+        
+        .service-features li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .service-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        /* ============ TESTIMONIALS ============ */
+        .testimonials-section {
+            background: #f7fafc;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-text {
+            color: #2d3748;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            color: #1e3a5f;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .testimonial-role {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        /* ============ CONTACT SECTION ============ */
+        .contact-section {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2c5282 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-section .section-title {
+            color: white;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            background: rgba(255,255,255,0.1);
+            padding: 2.5rem;
+            border-radius: 0.75rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 0.375rem;
+            font-family: inherit;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.95);
+            color: #1e3a5f;
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #10b981;
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2);
+        }
+        
+        /* ============ FOOTER ============ */
+        footer {
+            background: #1e3a5f;
+            color: white;
+            padding: 3rem 0 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h4 {
+            color: #10b981;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-section a:hover {
+            color: #10b981;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">LEGAL <span>OPS</span></a>
+                <nav>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <a href="#contact" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="about">
+        <div class="container">
+            <h1>Strategic Legal Support<br>For Modern Law Firms</h1>
+            <p>We provide litigation support, compliance solutions, and scaling infrastructure that empowers law firms to operate smarter, grow faster, and deliver better outcomes across borders.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Schedule Consultation</button>
+                <a href="https://wa.me/918937075256?text=Hi%20Legal%20Services%2C%20I%20want%20to%20learn%20more%20about%20your%20services" target="_blank" class="btn-secondary
